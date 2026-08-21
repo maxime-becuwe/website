@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KCS resistance prediction and CFD validation case study by Maxime Becuwe." />
+    <title>KCS Resistance Prediction | Maxime Becuwe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="kcs.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to home">MB<span>.</span></a>
+      <nav aria-label="Case study navigation">
+        <a href="index.html">Home</a>
+        <a href="#setup">Setup</a>
+        <a href="#validation">Validation</a>
+        <a href="#takeaways">Takeaways</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">CFD case study · Hydrodynamics</p>
+          <h1>KCS resistance <em>prediction & validation.</em></h1>
+          <p class="lead">A numerical investigation of the KRISO Container Ship, built as a reliable foundation for later CFD–DEM ship–ice simulations.</p>
+          <div class="chips"><span>STAR-CCM+</span><span>RANS</span><span>k–ω SST</span><span>VOF</span></div>
+        </div>
+        <figure><img src="assets/kcs/KCS_geometry.png" alt="KRISO Container Ship geometry" /><figcaption>KRISO Container Ship (KCS), a widely used reference hull for CFD validation.</figcaption></figure>
+      </section>
+
+      <section class="statement">
+        <p class="eyebrow">The objective</p>
+        <div><h2>Establish a credible resistance workflow before introducing the complexity of fragmented ice.</h2><p>The KCS was selected because extensive experimental data exists for comparison. The work focused on the computational domain, mesh strategy, solver settings and repeatable post-processing required to predict total resistance with confidence.</p></div>
+      </section>
+
+      <section id="setup">
+        <div class="heading"><p class="eyebrow">01 — Computational setup</p><h2>A model-scale container ship in a controlled numerical ocean.</h2></div>
+        <div class="metrics"><div><b>4.367 m</b><span>Length between perpendiculars</span></div><div><b>0.611 m</b><span>Breadth</span></div><div><b>0.205 m</b><span>Draft</span></div><div><b>0 DOF</b><span>Fixed-hull approach</span></div></div>
+        <div class="two-col"><div><h3>Domain & boundaries</h3><p>A three-dimensional open-water domain follows ITTC practice. The hull remains fixed while water and air enter at the target velocity, recreating the relative motion of a ship advancing through calm water.</p><p>The full hull is retained, rather than using a symmetry plane, so the setup can later accommodate asymmetric ice-floe fields.</p></div><figure><img src="assets/thesis/computational_domain.png" alt="Computational domain around the KCS ship" /><figcaption>Plan and profile views of the computational domain.</figcaption></figure></div>
+      </section>
+
+      <section class="blue-section">
+        <div class="heading"><p class="eyebrow">02 — Mesh & numerics</p><h2>Resolution where the flow matters most.</h2></div>
+        <div class="two-col"><figure><img src="assets/kcs/mesh_hull.png" alt="Refined numerical mesh around the KCS hull" /><figcaption>Local refinement around the hull, free surface, bow, stern and Kelvin wake.</figcaption></figure><div><h3>Mesh strategy</h3><ul><li>Trimmed-cell mesh with local refinement zones</li><li>Refined free surface to capture waves accurately</li><li>Prism layers along the hull to resolve the near-wall flow</li><li>Wall-function approach targeting <em>y+</em> around 30</li></ul><h3>Solver strategy</h3><p>Unsteady RANS is coupled with the k–ω SST turbulence model. The Volume of Fluid method tracks the air–water interface; five inner iterations and a 0.01 s time step provided stable convergence.</p></div></div>
+      </section>
+
+      <section id="validation">
+        <div class="heading"><p class="eyebrow">03 — Validation</p><h2>Comparing resistance with experimental reference data.</h2></div>
+        <div class="two-col results"><div><p>The approach was assessed across Froude numbers from <strong>0.06 to 0.18</strong>. Once the clean-water case was established, the same workflow was extended to ice concentrations of <strong>60%, 70% and 80%</strong>.</p><dl><div><dt>High-speed agreement</dt><dd>At 60% and 70% concentration, total resistance predictions were generally within about 10% at the higher test speeds.</dd></div><div><dt>Convergence</dt><dd>Time-averaging the contact forces over approximately 40 seconds produced a stable mean ice-resistance value.</dd></div><div><dt>Useful limitations</dt><dd>Low-speed and dense-ice results reveal where the floe physics, rather than the base hydrodynamic workflow, needs improvement.</dd></div></dl></div><figure><img src="assets/thesis/Total_resistance_sim_exp.png" alt="Simulated and experimental KCS total resistance comparison" /><figcaption>Total resistance: simulation versus experiment across ice concentrations.</figcaption></figure></div>
+      </section>
+
+      <section id="takeaways" class="takeaways">
+        <p class="eyebrow">What I learned</p>
+        <blockquote>Validation is not a final checkbox: it is the engineering framework that makes a more complex simulation trustworthy.</blockquote>
+        <div class="cards"><article><h3>Build from the physics</h3><p>Mesh, free-surface resolution and near-wall treatment directly shape the resistance prediction.</p></article><article><h3>Measure convergence</h3><p>Transient contact forces require a carefully chosen averaging interval, not a single instantaneous value.</p></article><article><h3>Make limitations explicit</h3><p>Identifying premature floe rotation gives a concrete direction for the next model iteration.</p></article></div>
+      </section>
+
+      <section class="closing"><p class="eyebrow">KCS resistance prediction & validation</p><h2>A robust CFD baseline for <em>ship–ice interaction.</em></h2><a href="index.html">Back to portfolio ↗</a></section>
+    </main>
+    <footer><span>© <span id="year"></span> Maxime Becuwe</span><span>Hydrodynamics & CFD</span></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
