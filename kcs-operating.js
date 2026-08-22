@@ -1,0 +1,5 @@
+const setup = document.querySelector('#setup');
+const operating = document.createElement('section');
+operating.className = 'operating-section';
+operating.innerHTML = `<p class="eyebrow">Operating conditions</p><h3>From model-scale tests to full-scale intuition.</h3><p>The same Froude number represents dynamically similar conditions at both scales. The table translates each model speed into its full-scale equivalent.</p><div class="operating-table"><div class="table-head"><span>Froude number</span><span>Model speed</span><span>Full-scale speed</span></div><div><span>0.108</span><span>0.915 m/s</span><span>5.14 m/s · 10 kn</span></div><div><span>0.152</span><span>1.281 m/s</span><span>7.20 m/s · 14 kn</span></div><div><span>0.195</span><span>1.647 m/s</span><span>9.26 m/s · 18 kn</span></div><div><span>0.227</span><span>1.922 m/s</span><span>10.80 m/s · 21 kn</span></div><div><span>0.260</span><span>2.196 m/s</span><span>12.34 m/s · 24 kn</span></div><div><span>0.282</span><span>2.379 m/s</span><span>13.37 m/s · 26 kn</span></div></div>`;
+setup.after(operating);
