@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Car radiator thermal-management CFD study by Maxime Becuwe." />
+  <title>Car Radiator CFD Study | Maxime Becuwe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kcs.css" />
+  <link rel="stylesheet" href="radiator.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html">MB<span>.</span></a><nav><a href="index.html">Home</a><a href="#setup">Setup</a><a href="#results">Results</a><a href="#takeaways">Takeaways</a></nav></header>
+  <main>
+    <section class="hero radiator-hero">
+      <div>
+        <p class="eyebrow">CFD case study · thermal management</p>
+        <h1>Car radiator <em>thermal simulation.</em></h1>
+        <p class="lead">A two-stream heat-exchanger model for studying how a car radiator transfers heat from engine coolant to the ambient airflow.</p>
+        <div class="chips"><span>STAR-CCM+</span><span>Heat transfer</span><span>Porous region</span><span>Dual-stream exchanger</span></div>
+      </div>
+      <figure><img src="assets/car_radiator/geometry_in.png" alt="Car radiator CFD geometry with the porous heat-exchanger region" /><figcaption>Radiator assembly and the computational regions used for the thermal model.</figcaption></figure>
+    </section>
+
+    <section class="statement">
+      <p class="eyebrow">The objective</p>
+      <div><h2>Learn to build a robust conjugate thermal workflow in STAR-CCM+.</h2><p>This project focuses on the modelling choices behind an automotive radiator: energy transport in two fluid streams, a porous representation of the core, region-to-region interfaces and a dual-stream heat-exchanger model. The final objective is to simulate the cooling of a hot coolant flow by incoming air.</p></div>
+    </section>
+
+    <section id="setup">
+      <div class="heading"><p class="eyebrow">01 — Thermal setup</p><h2>Two inlet streams, one cooling task.</h2></div>
+      <div class="metrics radiator-metrics"><div><b>35 °C</b><span>Air inlet temperature</span></div><div><b>107 °C</b><span>Coolant inlet temperature</span></div><div><b>2</b><span>Coupled fluid streams</span></div><div><b>Porous</b><span>Radiator-core representation</span></div></div>
+      <div class="two-col"><div><h3>Regions and interfaces</h3><p>The air-side and coolant-side domains are defined as separate regions. Their coupling through the radiator core is represented with a dual-stream heat exchanger, while interfaces provide the connection between the surrounding fluid regions and the core.</p><p>This structure makes it possible to represent the pressure loss and heat-transfer role of a dense fin-and-tube core without resolving every individual fin.</p></div><figure><img src="assets/car_radiator/geometry_out.png" alt="Outlet-side view of the car radiator CFD geometry" /><figcaption>Outlet-side view: air and coolant leave the coupled thermal system through separate paths.</figcaption></figure></div>
+    </section>
+
+    <section class="blue-section">
+      <div class="heading"><p class="eyebrow">02 — Modelling approach</p><h2>Representing radiator physics at the right scale.</h2></div>
+      <div class="cards light-cards"><article><h3>Energy equation</h3><p>Temperature is transported with each fluid flow, enabling the cooling of the coolant and the warming of the air to be tracked through the system.</p></article><article><h3>Porous core</h3><p>The complex internal geometry of the radiator is replaced by a porous region, capturing its bulk resistance and thermal exchange behaviour efficiently.</p></article><article><h3>Coupled exchanger</h3><p>A dual-stream heat exchanger transfers energy between the air and coolant streams without requiring the detailed resolution of every tube and fin.</p></article></div>
+      <div class="scalar-gallery"><figure><img src="assets/car_radiator/scalar_air_temp.png" alt="Air temperature contour through the radiator" /><figcaption>Air-side temperature field.</figcaption></figure><figure><img src="assets/car_radiator/scalar_coolant_temp.png" alt="Coolant temperature contour through the radiator" /><figcaption>Coolant-side temperature field.</figcaption></figure></div>
+    </section>
+
+    <section id="results">
+      <div class="heading"><p class="eyebrow">03 — Thermal response</p><h2>The monitored streams reveal the heat-transfer balance.</h2></div>
+      <div class="two-col results"><div><p>Monitor data from the converged simulation show the expected thermal behaviour: the air gains heat while the coolant is cooled across the radiator.</p><dl><div><dt>Air outlet</dt><dd>Approximately <strong>91.3 °C</strong> at the end of the run, rising from a 35 °C inlet condition.</dd></div><div><dt>Coolant outlet</dt><dd>Approximately <strong>70.1 °C</strong>, reduced from the 107 °C inlet condition.</dd></div><div><dt>Heat-exchanger monitor</dt><dd>Approximately <strong>−117.8 kW</strong>; the negative sign follows the monitor convention for heat removed from the coolant stream.</dd></div></dl></div><figure><img src="assets/car_radiator/screen_coolant_temp.png" alt="Coolant temperature monitor history" /><figcaption>Coolant outlet-temperature monitor throughout the simulation.</figcaption></figure></div>
+      <div class="result-figure"><figure><img src="assets/car_radiator/screen_air_temp.png" alt="Air temperature monitor history" /><figcaption>Air outlet-temperature monitor throughout the simulation.</figcaption></figure></div>
+    </section>
+
+    <section id="takeaways" class="takeaways"><p class="eyebrow">What I learned</p><blockquote>Thermal CFD is as much about connecting the right regions and models as it is about solving the flow.</blockquote><div class="cards"><article><h3>Model the core efficiently</h3><p>A porous representation makes an automotive radiator tractable without resolving its full fin-and-tube geometry.</p></article><article><h3>Connect regions carefully</h3><p>Well-defined interfaces are essential for a consistent transfer of flow and thermal information between regions.</p></article><article><h3>Monitor the energy balance</h3><p>Tracking both outlet temperatures and exchanged power provides a clear check on the physical response.</p></article></div></section>
+    <section class="closing"><p class="eyebrow">Car radiator thermal CFD study</p><h2>A practical foundation for <em>thermal-management simulations.</em></h2><a href="index.html">Back to portfolio ↗</a></section>
+  </main>
+  <footer><span>© <span id="year"></span> Maxime Becuwe</span><span>Thermal management & CFD</span></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
