@@ -19,14 +19,10 @@
         <p class="eyebrow">CFD case study · thermal management</p>
         <h1>Car radiator <em>thermal simulation.</em></h1>
         <p class="lead">A two-stream heat-exchanger model for studying how a car radiator transfers heat from engine coolant to the ambient airflow.</p>
+        <div class="hero-objective"><p class="eyebrow">The objective</p><p>Learn to set up thermal transfer in STAR-CCM+: porous regions, region interfaces and a dual-stream heat exchanger — then simulate the cooling of engine coolant inside a car radiator.</p></div>
         <div class="chips"><span>STAR-CCM+</span><span>Heat transfer</span><span>Porous region</span><span>Dual-stream exchanger</span></div>
       </div>
-      <figure><img src="assets/car_radiator/geometry_in.png" alt="Car radiator CFD geometry with the porous heat-exchanger region" /><figcaption>Radiator assembly and the computational regions used for the thermal model.</figcaption></figure>
-    </section>
-
-    <section class="statement">
-      <p class="eyebrow">The objective</p>
-      <div><h2>Learn to build a robust conjugate thermal workflow in STAR-CCM+.</h2><p>This project focuses on the modelling choices behind an automotive radiator: energy transport in two fluid streams, a porous representation of the core, region-to-region interfaces and a dual-stream heat-exchanger model. The final objective is to simulate the cooling of a hot coolant flow by incoming air.</p></div>
+      <div class="geometry-gallery"><figure><img src="assets/car_radiator/geometry_in.png" alt="Inlet-side view of the car radiator CFD geometry" /><figcaption>Inlet-side geometry.</figcaption></figure><figure><img src="assets/car_radiator/geometry_out.png" alt="Outlet-side view of the car radiator CFD geometry" /><figcaption>Outlet-side geometry.</figcaption></figure><p class="geometry-note"><span class="red-dot"></span><strong>Red:</strong> air inlet &nbsp; <span class="orange-dot"></span><strong>Orange:</strong> air outlet. The coolant enters through the upper pipe and exits through the lower pipe.</p></div>
     </section>
 
     <section id="setup">
@@ -43,8 +39,7 @@
 
     <section id="results">
       <div class="heading"><p class="eyebrow">03 — Thermal response</p><h2>The monitored streams reveal the heat-transfer balance.</h2></div>
-      <div class="two-col results"><div><p>Monitor data from the converged simulation show the expected thermal behaviour: the air gains heat while the coolant is cooled across the radiator.</p><dl><div><dt>Air outlet</dt><dd>Approximately <strong>91.3 °C</strong> at the end of the run, rising from a 35 °C inlet condition.</dd></div><div><dt>Coolant outlet</dt><dd>Approximately <strong>70.1 °C</strong>, reduced from the 107 °C inlet condition.</dd></div><div><dt>Heat-exchanger monitor</dt><dd>A heat-transfer magnitude of approximately <strong>117.8 kW</strong>. The absolute value is displayed to make the cooling capacity easier to interpret.</dd></div></dl></div><figure><img src="assets/car_radiator/screen_coolant_temp.png" alt="Coolant temperature monitor history" /><figcaption>Coolant outlet-temperature monitor throughout the simulation.</figcaption></figure></div>
-      <div class="result-figure"><figure><img src="assets/car_radiator/screen_air_temp.png" alt="Air temperature monitor history" /><figcaption>Air outlet-temperature monitor throughout the simulation.</figcaption></figure></div>
+      <div class="two-col results"><div><p>Monitor data from the converged simulation show the expected thermal behaviour: the air gains heat while the coolant is cooled across the radiator.</p><dl><div><dt>Air outlet</dt><dd>Approximately <strong>91.3 °C</strong> at the end of the run, rising from a 35 °C inlet condition.</dd></div><div><dt>Coolant outlet</dt><dd>Approximately <strong>70.1 °C</strong>, reduced from the 107 °C inlet condition.</dd></div><div><dt>Heat-exchanger monitor</dt><dd>A heat-transfer magnitude of approximately <strong>117.8 kW</strong>. The absolute value is displayed to make the cooling capacity easier to interpret.</dd></div></dl></div><figure><img src="assets/car_radiator/outlet_temperatures_C.png" alt="Air and coolant outlet temperature history in degrees Celsius" /><figcaption>Air and coolant outlet temperatures generated from the exported monitor data.</figcaption></figure></div>
       <div class="plot-gallery"><figure><img src="assets/car_radiator/heat_exchanger_power.png?v=d12610b" alt="Heat-exchanger power history generated from the simulation monitor data" /><figcaption>Heat-exchanger power, generated from the exported monitor data.</figcaption></figure><figure><img src="assets/car_radiator/outlet_temperatures_C.png" alt="Air and coolant outlet temperature history in degrees Celsius" /><figcaption>Outlet temperatures in °C, generated from the exported monitor data.</figcaption></figure></div>
     </section>
 
