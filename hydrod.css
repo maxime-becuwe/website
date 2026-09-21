@@ -1,0 +1,15 @@
+.hydrod-hero{min-height:auto;padding-top:85px;padding-bottom:70px;gap:5vw;grid-template-columns:1fr 1fr}
+.hydrod-hero h1{font-size:clamp(42px,5.2vw,76px)}
+.hydrod-hero .lead{font-size:clamp(18px,1.7vw,22px);margin:28px 0}
+.hydrod-hero img{height:auto;min-height:0;background:#fff;border:1px solid var(--line)}
+.hydrod-context{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;padding-top:60px;padding-bottom:85px;border-top:1px solid var(--line)}
+.hydrod-context h2{font-size:clamp(30px,3.2vw,44px);line-height:1.1}
+.project-copy{max-width:680px;color:#405b64;font-size:18px}
+.project-copy p{margin:0 0 20px}
+.report-download{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:30px;scroll-margin-top:30px}
+.download-button{display:inline-flex;align-items:center;gap:24px;background:var(--ink);color:var(--white);padding:15px 20px;font-size:16px;font-weight:700}
+.download-button:hover{background:var(--blue)}
+.report-details{font:12px/1.5 "DM Mono",monospace;color:var(--muted)}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+@media(max-width:760px){.hydrod-hero,.hydrod-context{grid-template-columns:1fr;gap:32px}.hydrod-hero{padding-top:55px;padding-bottom:45px}.hydrod-context{padding-top:40px;padding-bottom:55px}.project-copy{font-size:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

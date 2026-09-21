@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A ship hydrodynamics study by Maxime Becuwe at DTU with Yanlin Shao, using HydroD, Wadam and Wasim to analyse vessel motions and wave-induced loads." />
+  <title>Ship Hydrodynamics with HydroD | Maxime Becuwe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kcs.css" />
+  <link rel="stylesheet" href="hydrod.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Maxime Becuwe — home">MB<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#projects">All projects</a><a href="#report">Report ↓</a></nav>
+  </header>
+  <main>
+    <section class="hero hydrod-hero" aria-labelledby="project-title">
+      <div>
+        <p class="eyebrow">DTU · Special Course · Marine hydrodynamics</p>
+        <h1 id="project-title">A ship in waves.<br /><em>A study with HydroD.</em></h1>
+        <p class="lead">Understanding the motions and structural loads of a 200-metre ship, at rest and underway.</p>
+        <div class="chips"><span>HydroD</span><span>Boundary element method</span><span>Wadam / Wasim</span></div>
+      </div>
+      <figure>
+        <img src="assets/hydrod/ship-mesh.png" width="1468" height="874" alt="Perspective view of the ship hull panel mesh used in the HydroD project" />
+        <figcaption>The ship hull represented by a panel mesh in HydroD.</figcaption>
+      </figure>
+    </section>
+    <section class="hydrod-context" aria-labelledby="context-title">
+      <div><p class="eyebrow">About the project</p><h2 id="context-title">From wave response<br />to structural loads.</h2></div>
+      <div class="project-copy">
+        <p>As part of a Special Course at the Technical University of Denmark (DTU), supervised by Yanlin Shao, I studied the hydrodynamic behaviour of a 200-metre ship using HydroD.</p>
+        <p>The study uses the boundary element method (BEM), a potential-flow approach that represents the hull through a mesh of surface panels. I used Wadam for the vessel at zero forward speed and Wasim for forward speeds of 6, 8 and 10 m/s.</p>
+        <p>The analysis covers vessel motions, roll damping and bilge keels, wave-induced shear forces and bending moments, and added resistance in waves. It connects the hydrodynamic response with questions of hull structural design and propulsion demand.</p>
+        <div id="report" class="report-download">
+          <a class="download-button" href="assets/hydrod/Study_of_a_ship_on_HydroD.pdf" download>Download the full report <span aria-hidden="true">↓</span></a>
+          <span class="report-details">PDF · 35 pages · English</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> Maxime Becuwe</span><a href="index.html#projects">Back to projects ↗</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
