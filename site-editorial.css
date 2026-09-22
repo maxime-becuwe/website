@@ -1,0 +1,6 @@
+/* Shared section-label typography across portfolio pages. */
+body .eyebrow{font-size:clamp(16px,1.4vw,19px);line-height:1.45;letter-spacing:.045em;font-weight:500}
+body .project-type{font-size:14px;line-height:1.5}
+body .heading{align-items:start}
+body blockquote{font-size:clamp(26px,3.2vw,43px);line-height:1.2;letter-spacing:-.025em}
+@media(max-width:760px){body .eyebrow{font-size:16px;line-height:1.5}body .section-heading .eyebrow{margin-bottom:12px}}
