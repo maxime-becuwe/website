@@ -5,3 +5,7 @@
 main img{display:block;width:100%;max-width:100%;height:auto;min-height:0;object-fit:contain}
 
 .disc-results{padding-left:clamp(24px,6vw,100px);padding-right:clamp(24px,6vw,100px);background:#dcebed}.disc-result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start;margin:32px 0}.disc-result-grid img{height:auto;background:white;border:1px solid var(--line)}.disc-results h3{font:600 25px/1.25 Fraunces,serif;margin:22px 0 14px}.result-copy{max-width:920px;color:#405b64;font-size:18px}.disc-result-grid figcaption{font-size:13px;line-height:1.6}@media(max-width:900px){.disc-result-grid{grid-template-columns:1fr}}
+
+.comparison-note{padding:20px;border-left:4px solid #c5713a;background:#f5eadc;color:#493a2b;line-height:1.65;margin-bottom:30px}.comparison-table-wrap{overflow-x:auto;margin:28px 0}.comparison-table{width:100%;border-collapse:collapse;text-align:left;font-size:16px}.comparison-table th,.comparison-table td{padding:15px;border-bottom:1px solid var(--line)}.comparison-table thead{background:#c8dfe4}.comparison-detail{margin:30px 0;padding:18px;border:1px solid var(--line)}.comparison-detail summary{cursor:pointer;font-weight:600}.comparison-detail figure{margin-top:20px}
+
+.story-section .result-copy{max-width:900px}.story-section .disc-photo-grid{margin:36px 0}.story-section h3{font-size:29px}.disc-about>div>p:not(.eyebrow){font-size:18px;color:#405b64}
