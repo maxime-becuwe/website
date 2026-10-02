@@ -1,0 +1,18 @@
+/* Homepage palette proposal: ivory, graphite and ocean blue accents. */
+:root{--ink:#252c30;--muted:#607184;--paper:#f7f4ed;--lime:#83c3df;--line:#d0dbe5;--white:#fffdf8;--accent:#105474;--mid-blue:#166585;--pale-blue:#ecf7fc}
+.brand span,.site-header nav a:hover,.social-links a:hover,.hero h1 em,.eyebrow,.project-type,.skills-grid span,.project-link{color:var(--accent)}
+.hero{padding-top:clamp(65px,8vw,110px);padding-bottom:45px;min-height:calc(100svh - 76px)}
+.hero h1{font-family:"Sora",sans-serif;font-weight:500;font-size:clamp(44px,6.4vw,92px);line-height:1.12;max-width:1100px;letter-spacing:-.035em;overflow-wrap:break-word}
+.hero h1 em{font-style:normal;font-weight:500}
+main h2,main h3,main h4,.section-heading h2,.split-section h2,.project-card h3,.background-group h3,.timeline-entry h4,.contact-section h2,.contact-section h2 em{font-family:"Sora",sans-serif;font-weight:500;line-height:1.15;letter-spacing:-.025em}
+.hero-copy{max-width:790px;font-size:clamp(18px,1.7vw,22px);line-height:1.6;color:#505d6b;margin:28px 0 18px}
+.hero-availability{max-width:750px;font-size:clamp(17px,1.5vw,20px);font-weight:600;line-height:1.55;margin:0 0 30px;color:var(--ink)}
+.hero-meta{padding-top:45px;line-height:1.6;flex-wrap:wrap}
+.button-dark{background:var(--accent);color:#fff}.button-dark:hover{background:#0b3c54}.tag-list li{border-color:#bdcddd}
+.eyebrow,.project-type,.skills-grid span{color:var(--mid-blue)}.project-number{color:#687d93}.project-content>p:not(.project-type),.split-section p:not(.eyebrow){color:#536171}
+.project-art,.kcs-art,.thesis-gallery{background:var(--pale-blue)}
+.contact-section .eyebrow,.contact-section h2 em,.email-link{color:var(--lime)}
+.secondary-email,.phone-link{color:#ccdcec}footer{color:#cbd9e7;border-color:#485b70}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+@media(max-width:720px){.hero{min-height:auto;padding-top:55px}.hero h1{font-size:clamp(38px,7.6vw,54px)}.hero-meta{padding-top:35px}.hero-actions{flex-wrap:wrap;gap:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}}
