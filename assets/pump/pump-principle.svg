@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+<title id="title">Centrifugal pump operating principle</title><desc id="desc">Axial inlet at the centre in pink. An impeller in the yellow rotating region drives fluid outwards into the stationary grey volute and towards the orange outlet. Conceptual front view, not to scale.</desc>
+<defs><path id="blade" d="M360 257 Q409 199 446 207" fill="none" stroke="#826a28" stroke-width="11" stroke-linecap="round"/></defs>
+<rect width="1000" height="560" fill="#f7f4ed"/>
+<path d="M469 139 L792 139 L792 222 L519 222 C574 331 510 466 369 476 C208 488 120 377 132 260 C143 142 239 82 348 91 C404 95 441 112 469 139Z" fill="#dce1e5" stroke="#607184" stroke-width="3"/>
+<circle cx="335" cy="285" r="153" fill="#f2dfa0" stroke="#a88c36" stroke-width="2" stroke-dasharray="8 6"/>
+<g><use href="#blade"/><use href="#blade" transform="rotate(60 335 285)"/><use href="#blade" transform="rotate(120 335 285)"/><use href="#blade" transform="rotate(180 335 285)"/><use href="#blade" transform="rotate(240 335 285)"/><use href="#blade" transform="rotate(300 335 285)"/></g>
+<circle cx="335" cy="285" r="46" fill="#d8a6c7" stroke="#925779" stroke-width="2"/><circle cx="335" cy="285" r="8" fill="#925779"/>
+<rect x="780" y="139" width="12" height="83" fill="#cf8b51"/>
+<g font-family="Arial,sans-serif" fill="#252c30" font-size="21">
+<text x="610" y="80">Outlet</text><text x="610" y="111" font-size="18" fill="#536171">Area: 4.85 × 10⁻⁴ m²</text><text x="610" y="249" font-size="17" fill="#536171">Flow collected by the volute</text>
+<text x="35" y="40">Axial inlet</text><text x="35" y="65" font-size="18" fill="#536171">Area: 2.10 × 10⁻³ m²</text>
+<text x="554" y="329">Rotating region · 2,000 rpm</text><text x="554" y="358" font-size="18" fill="#536171">Blade-tip radius: 56 mm</text><text x="554" y="384" font-size="18" fill="#536171">Impeller diameter: 112 mm</text>
+<text x="554" y="431">Stationary region</text><text x="554" y="459" font-size="18" fill="#536171">Casing and connecting passages</text>
+<text x="35" y="532" font-size="16" fill="#607184">Conceptual front view · not to scale</text>
+</g></svg>
