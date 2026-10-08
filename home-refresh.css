@@ -16,3 +16,5 @@ main h2,main h3,main h4,.section-heading h2,.split-section h2,.project-card h3,.
 a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
 @media(max-width:720px){.hero{min-height:auto;padding-top:55px}.hero h1{font-size:clamp(38px,7.6vw,54px)}.hero-meta{padding-top:35px}.hero-actions{flex-wrap:wrap;gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none}}
+
+.pump-preview{height:auto;align-self:center;background:#fff}.pump-preview img{display:block;width:100%;height:auto;object-fit:contain}
