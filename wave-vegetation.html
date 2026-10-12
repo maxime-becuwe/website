@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A preliminary study of wave-vegetation interactions developed in support of a DTU PhD application." />
+  <title>Pre study of wave-vegetation interaction | Maxime Becuwe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Sora:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kcs.css" />
+  <link rel="stylesheet" href="wave-vegetation.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Maxime Becuwe - home">MB<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#projects">All projects</a></nav>
+  </header>
+  <main>
+    <article>
+      <p class="eyebrow">Coastal engineering · Numerical modelling</p>
+      <h1>Pre study of<br /><em>wave-vegetation interaction</em></h1>
+      <h2>Abstract</h2>
+      <p>This project is a preliminary numerical study of how submerged coastal vegetation influences wave propagation. The first model considers regular waves travelling through an array of rigid vertical cylinders. Linear wave theory is used to calculate the orbital flow, while Morison's equation estimates the hydrodynamic loading and the energy dissipated by vegetation drag. A wave-energy balance is then solved along the vegetated area to predict the progressive attenuation of wave height.</p>
+      <p>The study supports an application for a PhD scholarship on wave-vegetation interactions at DTU. Its purpose is to demonstrate the ability to select suitable physical models, handle coupled equations and develop a numerical methodology for this type of problem. <strong>The work is still in progress:</strong> the present model is preliminary and not yet fully validated, and its assumptions, implementation and results may evolve as the study develops.</p>
+      <a class="report-link" href="assets/wave-vegetation/wave-vegetation-pre-study.pdf" download><span>Download the report</span><small>PDF · V1</small></a>
+    </article>
+  </main>
+  <footer><span>© <span id="year"></span> Maxime Becuwe</span><a href="index.html#projects">Back to projects ↗</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
