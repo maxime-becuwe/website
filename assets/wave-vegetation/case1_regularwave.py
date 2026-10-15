@@ -564,6 +564,10 @@ for i, x in enumerate(x_irregular):
         )
 
 
+    # The last position has been reconstructed; there is no next slice to update.
+    if i == len(x_irregular) - 1:
+        break
+
     # Amplitudes remain constant after the vegetation
     if x >= L_vegetation:
         amplitudes_x[i + 1, :] = amplitudes_x[i, :]
