@@ -729,14 +729,10 @@ eta_with_vegetation = eta_xt[
 ]
 
 
-fig, axes = plt.subplots(
-    2,
-    1,
-    figsize=(14, 10),
-    sharex=True
-)
+# Figure 1: instantaneous irregular free surface
+fig, ax = plt.subplots(figsize=(14, 5.5))
 
-axes[0].plot(
+ax.plot(
     x_irregular,
     eta_without_vegetation,
     color="#8ba6b3",
@@ -745,7 +741,7 @@ axes[0].plot(
     label="Without vegetation"
 )
 
-axes[0].plot(
+ax.plot(
     x_irregular,
     eta_with_vegetation,
     color="#105474",
@@ -753,7 +749,7 @@ axes[0].plot(
     label="With vegetation"
 )
 
-axes[0].axvspan(
+ax.axvspan(
     0,
     L_vegetation,
     color="#2e806c",
@@ -761,23 +757,31 @@ axes[0].axvspan(
     label="Vegetated area"
 )
 
-axes[0].axvline(
+ax.axvline(
     L_vegetation,
     color="#2e806c",
     linestyle="--",
     linewidth=1.2
 )
 
-axes[0].set_ylabel("Surface elevation $\\eta$ (m)")
-axes[0].set_title(
+ax.set_xlim(0, 1.5 * L_vegetation)
+ax.set_xlabel("Position $x$ (m)")
+ax.set_ylabel(r"Surface elevation $\eta$ (m)")
+ax.set_title(
     f"Irregular sea state at t = "
     f"{time_record[time_index]:.1f} s"
 )
-axes[0].grid(alpha=0.2)
-axes[0].legend(frameon=False)
+ax.grid(alpha=0.2)
+ax.legend(frameon=False)
+
+plt.tight_layout()
+plt.show()
 
 
-axes[1].plot(
+# Figure 2: evolution of the significant wave height
+fig, ax = plt.subplots(figsize=(14, 5.5))
+
+ax.plot(
     x_irregular,
     Hs_profile,
     color="#105474",
@@ -785,7 +789,7 @@ axes[1].plot(
     label="Significant wave height $H_s(x)$"
 )
 
-axes[1].axvspan(
+ax.axvspan(
     0,
     L_vegetation,
     color="#2e806c",
@@ -793,18 +797,18 @@ axes[1].axvspan(
     label="Vegetated area"
 )
 
-axes[1].axvline(
+ax.axvline(
     L_vegetation,
     color="#2e806c",
     linestyle="--",
     linewidth=1.2
 )
 
-axes[1].set_xlabel("Position $x$ (m)")
-axes[1].set_ylabel("Significant wave height $H_s$ (m)")
-axes[1].grid(alpha=0.2)
-axes[1].legend(frameon=False)
+ax.set_xlim(0, 1.5 * L_vegetation)
+ax.set_xlabel("Position $x$ (m)")
+ax.set_ylabel("Significant wave height $H_s$ (m)")
+ax.grid(alpha=0.2)
+ax.legend(frameon=False)
 
-plt.xlim(0, 1.5 * L_vegetation)
 plt.tight_layout()
 plt.show()
