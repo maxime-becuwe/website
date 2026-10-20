@@ -28,6 +28,31 @@
       <p>This ongoing preliminary study examines how submerged coastal vegetation influences wave propagation. Two cases are currently investigated through a Python numerical model: a regular wave and an irregular sea state. The regular-wave case combines linear wave theory, Morison's equation and a wave-energy balance to predict the progressive attenuation of wave height. The irregular-wave case extends this approach by decomposing the sea state into spectral components and propagating their amplitudes through successive vegetated sections.</p>
       <p>The current PDF report covers the regular-wave case only. The irregular-wave analysis is still under development and will be included in a future revision. The commented Python script and complete Jupyter notebook remain available below for readers who wish to examine the modelling approach and follow its development.</p>
       <p>The study supports an application for a PhD scholarship on wave-vegetation interactions at DTU. Its purpose is to demonstrate the ability to select suitable physical models, handle coupled equations and develop a numerical methodology for this type of problem. <strong>The work is still in progress:</strong> the model is preliminary and not yet fully validated, and its assumptions, implementation and results may evolve as the study develops.</p>
+      <section class="wave-cases" aria-labelledby="wave-cases-title">
+        <p class="section-kicker">Current numerical models</p>
+        <h2 id="wave-cases-title">Two wave cases</h2>
+        <p class="wave-cases-intro">The study currently considers two complementary conditions. The first establishes the attenuation method for a single regular wave. The second applies the same energy-based approach to an irregular sea state assembled from multiple spectral components.</p>
+        <div class="wave-case-grid">
+          <article class="wave-case-card">
+            <figure>
+              <img src="assets/wave-vegetation/wave-propagation-vegetation.png" alt="Regular wave propagating through the submerged vegetation and losing amplitude" />
+              <figcaption>Regular-wave propagation through the vegetated area.</figcaption>
+            </figure>
+            <p class="wave-case-number">Case 01</p>
+            <h3>Regular wave</h3>
+            <p>A monochromatic wave is propagated through successive vegetation slices. The local drag dissipation progressively reduces its wave height along the vegetation field.</p>
+          </article>
+          <article class="wave-case-card">
+            <figure>
+              <img src="assets/wave-vegetation/irregular-wave-propagation-vegetation.png" alt="Irregular wave propagating above the seabed and through the submerged vegetation" />
+              <figcaption>Irregular-wave propagation across the vegetated area at <i>t</i> = 0 s.</figcaption>
+            </figure>
+            <p class="wave-case-number">Case 02</p>
+            <h3>Irregular sea state</h3>
+            <p>The sea surface is reconstructed from several spectral components. Their combined horizontal velocity determines the nonlinear vegetation drag, and the resulting dissipation attenuates the components as they travel downstream.</p>
+          </article>
+        </div>
+      </section>
       <div class="download-links">
         <a class="report-link" href="assets/wave-vegetation/wave-vegetation-pre-study.pdf" download><span>Download the report</span><small>PDF · V1</small></a>
         <a class="report-link" href="assets/wave-vegetation/case1_regularwave.py" download><span>Download Python code</span><small>Python · .py</small></a>

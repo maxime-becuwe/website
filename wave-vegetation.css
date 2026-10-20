@@ -13,6 +13,16 @@ h2{margin:0 0 22px;font-size:clamp(26px,3vw,38px)}
 article>p:not(.eyebrow){max-width:980px;font-size:19px;line-height:1.8;color:var(--muted)}
 .notebook-preview{margin-top:70px;padding-top:60px;border-top:1px solid var(--line)}
 .section-kicker{margin:0 0 12px;font:12px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+.wave-cases{margin-top:72px;padding-top:58px;border-top:1px solid var(--line)}
+.wave-cases-intro{max-width:980px;margin:0 0 34px;font-size:18px;line-height:1.75;color:var(--muted)}
+.wave-case-grid{display:grid;grid-template-columns:1fr;gap:34px}
+.wave-case-card{min-width:0;padding:22px;border:1px solid var(--line);background:#fff}
+.wave-case-card figure{margin:0 0 24px}
+.wave-case-card img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.wave-case-card figcaption{margin-top:10px;color:var(--muted);font-size:12px;line-height:1.5}
+.wave-case-number{margin:0 0 8px;font:11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+.wave-case-card h3{margin:0 0 12px;font:500 clamp(22px,2.3vw,30px) "Sora",sans-serif;color:var(--ink)}
+.wave-case-card>p:last-child{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}
 .notebook-preview>p:not(.section-kicker){max-width:980px;margin:0 0 34px;font-size:17px;line-height:1.75;color:var(--muted)}
 .notebook-frame{display:block;width:100%;min-height:900px;margin-top:26px;border:0;background:#fff}
 .download-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
